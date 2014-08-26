@@ -1,0 +1,20 @@
+#!/bin/bash
+if [ -z "$1" ]; then
+    echo "Please pass a comment for the commit! Use: ./pcommit \"comment\""
+else
+    cd ~/datadventures
+    echo ""
+    echo "1. Proceeding to build the site..."
+    jekyll build
+    echo ""
+    echo "2. Committing gh-pages"
+    cd _site
+    git add -A
+    git commit -m "ghp $1"
+    git push -f origin gh-pages
+    echo ""
+    echo "3. Committing site master"
+    cd ..
+    git commit -a -m "master $1"
+    git push -f origin master
+fi

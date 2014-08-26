@@ -55,7 +55,7 @@ We should now be able to check our page on http://username.github.io/subdomain (
 Then, *Blind Gaenger* suggests to reference the gh-pages banch to a subdir of the master branch.
 
     git checkout master
-    git submodule add -b gh-pages git@github.com:username/subdomain.git
+    git submodule add -b gh-pages git@github.com:username/subdomain.git _site
     git commit -m "Added gh-pages as submodule of master"
     git push
     git submodule init
