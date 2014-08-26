@@ -3,5 +3,6 @@ subtitle: "...and other knowledge marauding!"
 markdown: redcarpet
 pygments: true
 url: http://magp.github.io/datadventures
+baseurl:
 author: MichaelGuimet
 paginate: 5
