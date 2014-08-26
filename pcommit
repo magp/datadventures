@@ -6,6 +6,7 @@ else
     echo ""
     echo "1. Proceeding to build the site..."
     jekyll build
+    echo "datadventures.com" > _site/CNAME
     echo ""
     echo "2. Committing gh-pages"
     cd _site
