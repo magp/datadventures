@@ -1,0 +1,25 @@
+
+{% capture date %}{{ post.date }}{% endcapture %}
+{% capture iyear %}{{ date | date: "%Y" }}{% endcapture %}
+
+{% unless year == iyear %}
+  {% assign year = iyear %}
+  {% unless forloop.first %}
+    </ul>
+  {% endunless %}
+  <h2 class="arch-year">{{ date | date: "%Y" }}</h2>
+  <ul class="arch-list" type="none">
+{% endunless %}
+
+<li>
+  <h2 class="arch-link"><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></h2>
+    <span class="arch-meta">
+      <span class="arch-date">{{ date | date: "%Y.%m.%d" }}</span>
+      |
+      <span class="arch-author">{{ post.author }}</span>
+      |
+      <span class="arch-cats">{{ post.category | join: ', ' }}</span>
+      | 
+      <span class="arch-tags">{{ post.tags | join: ', ' }}</span>
+    </span>
+</li>

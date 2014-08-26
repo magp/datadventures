@@ -1,0 +1,7 @@
+name: datAdventures
+subtitle: "...and other knowledge marauding!"
+markdown: redcarpet
+pygments: true
+url: http://magp.github.io/datadventures
+author: MichaelGuimet
+paginate: 5

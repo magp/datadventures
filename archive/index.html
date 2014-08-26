@@ -1,0 +1,13 @@
+---
+layout: spage
+title: Archive
+---
+
+<div class="archive">
+{% for post in site.posts reverse %}
+  {% if post.layout == 'post' or post.layout == 'postng' %}
+    {% include archive.html %}
+  {% endif %}
+{% endfor %}
+  </ul>
+</div>
