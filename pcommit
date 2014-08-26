@@ -10,11 +10,11 @@ else
     echo "2. Committing gh-pages"
     cd _site
     git add -A
-    git commit -m "ghp $1"
+    git commit -m "ghp: $1"
     git push -f origin gh-pages
     echo ""
     echo "3. Committing site master"
     cd ..
-    git commit -a -m "master $1"
+    git commit -a -m "master: $1"
     git push -f origin master
 fi
